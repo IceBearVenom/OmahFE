@@ -15,4 +15,4 @@ Project website landing page untuk **OmahFE**.
 - Membantu menyesuaikan CSS agar desainnya responsif di berbagai ukuran layar.
 
 ## Cara Menjalankan
-Cukup buka file `index.html` langsung di browser (Chrome, Edge, dll).
+Cukup buka file `index.html` langsung di browser (Chrome, Edge, dll) atau membuka link berikut https://icebearvenom.github.io/OmahFE/.
