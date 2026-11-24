@@ -12,13 +12,14 @@
     <!-- Header -->
      <header>
         <nav class="navbar">
-            <div class="brand">
+            <div class="brand" onclick="window.location.hash = '#hero';" style="cursor: pointer;">
                 <p>OmahFE</p>
             </div>
             <div class="menu">
                 <a href="#about">About</a>
-                <a href="#features">Features</a>
                 <a href="#portfolio">Portfolio</a>
+                <a href="#testimonial">Testimonial</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="sign">
@@ -31,7 +32,7 @@
     <!-- Main -->
     <main>
         <!-- Hero -->
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="left">
                 <div class="title">
                     <h3>Omah</h3>
@@ -151,7 +152,7 @@
         </section>
 
         <!-- What They Say About OmahFE -->
-        <section class="testimonial">
+        <section id="testimonial" class="testimonial">
             <div class="title">
                 <h3>
                     What They Say About
@@ -212,7 +213,7 @@
         </section>
 
         <!-- FAQ -->
-        <section class="faq-section">
+        <section id="faq" class="faq-section">
         <div class="faq-inner">
             <h2 class="faq-title">FAQ</h2>
 

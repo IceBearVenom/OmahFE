@@ -1,25 +1,28 @@
+
+// ===== Faq 
 const faqItems = document.querySelectorAll('.faq-item');
 
-    faqItems.forEach((item) => {
-        const button = item.querySelector('.faq-question');
+faqItems.forEach((item) => {
+    const button = item.querySelector('.faq-question');
 
-        button.addEventListener('click', () => {
-            const isOpen = item.classList.contains('active');
+    button.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
 
-            // Close all open items first (remove this block if you want multiple open at once)
-            faqItems.forEach((otherItem) => {
-                otherItem.classList.remove('active');
-                otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-            });
-
-            // Toggle the clicked item
-            if (!isOpen) {
-                item.classList.add('active');
-                button.setAttribute('aria-expanded', 'true');
-            }
+        // Close all open items first (remove this block if you want multiple open at once)
+        faqItems.forEach((otherItem) => {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
         });
-    });
 
+        // Toggle the clicked item
+        if (!isOpen) {
+            item.classList.add('active');
+            button.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
+
+// ===== Form validation
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     const firstName = document.getElementById('first-name');
