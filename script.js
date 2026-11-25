@@ -132,3 +132,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// ===== Hiding Menu
+const navActionMenu = document.querySelector(".nav-action");
+const navToggle = document.querySelector(".nav-toggle");
+let navIsToggled = false;
+
+navToggle.addEventListener("click", () => {
+    navIsToggled = !navIsToggled;
+    navActionMenu.classList.toggle('hidden');
+
+    navToggle.innerHTML = navIsToggled ? "&times;" : "&#9776;";
+
+    // navToggle.textContent = navMenu.className.contains('hidden') ? "&#9776;" : "&times;";
+})

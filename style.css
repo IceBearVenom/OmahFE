@@ -8,6 +8,20 @@
     font-display: swap;
     font-weight: 400;
 }
+@font-face {
+    font-family: "Scotch Bold";
+    src: url(./assets/fonts/ScotchBold.ttf) format('truetype');
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Scotch Little";
+    src: url(./assets/fonts/ScotchLittle.ttf) format('truetype');
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
 
 /* ===== Global Layout */
 * {
@@ -151,6 +165,12 @@ header {
     font-weight: 700;
 }
 
+.navbar .nav-action {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 .navbar .menu {
     display: flex;
     flex-direction: row;
@@ -188,6 +208,18 @@ header {
     background: #6699C1;
     filter: drop-shadow(2px 2px 0px #0F1C26);
     color: #E7F3DA;
+}
+
+.navbar .nav-toggle {
+    width: 32px;
+    height: 32px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #D7CEC7;
+    border: 1px solid #0F1C26;
+    border-radius: 4px;
+    font-size: 24px;
 }
 
 /* ===== Hero */
@@ -831,17 +863,37 @@ header {
 /* Mobile (<= 768px) */
 @media (max-width: 768px) {
     .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: row;
         padding: 14px 16px;
         gap: 12px;
     }
 
+    .navbar .nav-action {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .navbar .nav-action.hidden {
+        display: none;
+    }
+
     .navbar .menu {
+        background: #84ADCE;
+        top: 60px;
+        left: 0;
+        position: absolute;
         order: 3;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        padding: 20px 0;
         gap: 20px;
+    }
+
+    .navbar .nav-toggle {
+        display: flex;
     }
 
     .hero {
