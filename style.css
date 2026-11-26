@@ -151,27 +151,27 @@ header {
 
 .navbar {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
     align-items: center;
     padding: 18px 45px;
-    gap: 16px;
 }
 
+/* 1. Left: Brand */
 .navbar .brand {
+    justify-self: start;
     color: #600E01;
     font-size: 22px;
     font-weight: 700;
 }
 
 .navbar .nav-action {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: contents;
 }
 
+/* 2. Middle: Menu */
 .navbar .menu {
+    justify-self: center;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -186,6 +186,7 @@ header {
 }
 
 .navbar .sign {
+    justify-self: end;
     display: flex;
     flex-direction: row;
     gap: 12px;
@@ -211,15 +212,7 @@ header {
 }
 
 .navbar .nav-toggle {
-    width: 32px;
-    height: 32px;
     display: none;
-    justify-content: center;
-    align-items: center;
-    background: #D7CEC7;
-    border: 1px solid #0F1C26;
-    border-radius: 4px;
-    font-size: 24px;
 }
 
 /* ===== Hero */
@@ -977,6 +970,9 @@ dialog[open] {
 
     .navbar .nav-toggle {
         display: flex;
+        max-width: fit-content;
+        justify-self: flex-end;
+        align-self: flex-end;
     }
 
     .hero {
