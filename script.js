@@ -143,6 +143,40 @@ navToggle.addEventListener("click", () => {
     navActionMenu.classList.toggle('hidden');
 
     navToggle.innerHTML = navIsToggled ? "&times;" : "&#9776;";
-
-    // navToggle.textContent = navMenu.className.contains('hidden') ? "&#9776;" : "&times;";
 })
+
+// ===== Sign-in/Sign-up Pop Up
+const authDialog = document.getElementById('authDialog');
+const signInForm = document.getElementById('signInForm');
+const signUpForm = document.getElementById('signUpForm');
+
+// Open Dialog
+document.getElementById("sign-in-btn").addEventListener("click", () => {
+    authDialog.showModal();
+    signInForm.hidden = false;
+    signUpForm.hidden = true;
+})
+
+document.getElementById("sign-up-btn").addEventListener("click", () => {
+    authDialog.showModal();
+    signInForm.hidden = true;
+    signUpForm.hidden = false;
+})
+
+// Switch to Sign In
+document.getElementById('tabSignIn').addEventListener('click', () => {
+    signInForm.hidden = false;
+    signUpForm.hidden = true;
+});
+
+// Switch to Sign Up
+document.getElementById('tabSignUp').addEventListener('click', () => {
+    signInForm.hidden = true;
+    signUpForm.hidden = false;
+});
+
+// Close via X button or clicking dark backdrop outside .dialog-box
+document.getElementById('closeDialogBtn').addEventListener('click', () => authDialog.close());
+authDialog.addEventListener('click', (e) => {
+    if (e.target === authDialog) authDialog.close();
+});

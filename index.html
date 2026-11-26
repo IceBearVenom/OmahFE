@@ -24,8 +24,8 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="sign">
-                    <button class="sign-in">Sign In</button>
-                    <button class="sign-up">Sign Up</button>
+                    <button id="sign-in-btn" class="sign-in">Sign In</button>
+                    <button id="sign-up-btn" class="sign-up">Sign Up</button>
                 </div>
             </div>
             <button class="nav-toggle">
@@ -424,6 +424,51 @@
         <p>&copy; OmahFE 2026</p>
     </div>
     </footer>
+
+    <!-- Pop Up Element -->
+    <!-- Auth -->
+    <dialog id="authDialog">
+        <div class="dialog-box">
+            <div class="dialog-header">
+                <button type="button" id="tabSignIn">Sign In</button>
+                <button type="button" id="tabSignUp">Sign Up</button>
+                <button type="button" id="closeDialogBtn" aria-label="Close">&times;</button>
+            </div>
+
+            <!-- Sign In Form -->
+            <form id="signInForm">
+                <h2>Welcome Back</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="••••••••">
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signUpForm" hidden>
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required placeholder="••••••••">
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </dialog>
+
 
     <script src="./script.js"></script>
 
